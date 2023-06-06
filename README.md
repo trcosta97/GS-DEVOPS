@@ -47,7 +47,7 @@ problemas de logística.
 
 ## Instalação e execução da API
 
-A API foi desenvolvida usando  Java 17 e com o framework Spring + Gradle e banco de dados relacional Oracle SQL.
+A API foi desenvolvida usando  Java 17 e com o framework Spring e banco de dados relacional Oracle SQL.
 O primeiro passo é buildar a aplicação. Abra um prompt de comando na pasta raiz do projeto e execute o comando:
 ```console
 admin:~$ gradle build
