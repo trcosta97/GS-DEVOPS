@@ -312,47 +312,6 @@ public class EnderecoUsuario {
 }
 ```
 
-## Métodos JPQL 
-
-### Busca de restaurante por nome:
-
-```console
-public List<Restaurante> buscarRestaurantePorNome(String nome) {
-
-    String jpql = "SELECT r FROM Restaurante r WHERE r.nome = :nome";
-    TypedQuery<Restaurante> query = em.createQuery(jpql, Restaurante.class);
-    query.setParameter("nome", nome);
-
-    return query.getResultList();
-}
-```
-### Busca de alimento por tag:
-```console
-public List<Alimento> buscarAlimentoPorTag(String tag) {
-
-    String jpql = "SELECT a FROM Alimento a WHERE :tag MEMBER OF a.tags";
-    TypedQuery<Alimento> query = em.createQuery(jpql, Alimento.class);
-    query.setParameter("tag", tag);
-
-    return query.getResultList();
-}
-
-```
-
-### Busca de usuário por UF:
-
-```console
-public List<Usuario> buscarUsuariosPorUF(Uf uf) {
-
-    String jpql = "SELECT u FROM Usuario u WHERE u.enderecoUsuario.uf = :uf";
-    TypedQuery<Usuario> query = em.createQuery(jpql, Usuario.class);
-    query.setParameter("uf", uf);
-
-    return query.getResultList();
-}
-
-```
-
 
 ## Lista de ENDPOINTS:  
 
